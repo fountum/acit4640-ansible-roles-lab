@@ -1,4 +1,12 @@
 # 4640-ansible-roles-lab
+![success](./server-img.png)
+
+## Requiements
+install on the control node:  
+- python >= 3.6
+- boto3 >= 1.34.0
+- botocore >= 1.34.0  
+
 ## Terraform
 Initialize Terraform
 ```
