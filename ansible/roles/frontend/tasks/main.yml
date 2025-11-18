@@ -26,3 +26,11 @@
     dest: /etc/nginx/sites-enabled/default
     state: link
   when: "'server_role_frontend_server' in group_names and ansible_facts['distribution'] == 'Ubuntu'"
+  notify: "reload nginx"
+
+handlers:
+  - name: reload nginx
+    ansible.builtin.service:
+      name: nginx
+      state: reloaded
+
